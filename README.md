@@ -6,21 +6,37 @@ SublimeLinter-contrib-ameba
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [ameba](https://github.com/veelenga/ameba). It will be used with files that have crystal syntax.
 
 ## Installation
-SublimeLinter must be installed in order to use this plugin. 
+SublimeLinter must be installed in order to use this plugin.
 
-Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
+Please use [Package Control](https://packagecontrol.io) to install both SublimeLinter and the linter plugin.
 
-Before installing this plugin, you must ensure that `ameba` is installed on your project.
+Before installing this plugin, you must ensure that `ameba` is installed on your project. Add `ameba` to your `shard.yml` file, in `development_dependencies`:
 
-In order for `ameba` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
+```crystal
+development_dependencies:
+  ameba:
+    github: veelenga/ameba
+```
+
+Run `shards install`, this will place an `ameba` executable in a `bin` folder inside your project's folder.
+
+That executable will be used by default, if you want to use another executable just specify it in SublimeLinter User settings.
+
+If an `.ameba.yml` config file is located in your project's root path, it will be used.
 
 ## Settings
 - SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
 - Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
-Additional SublimeLinter-ameba settings:
+- Custom `ameba` executable:
 
-|Setting|Description    |
-|:------|:--------------|
-|foo    |Something.     |
-|bar    |Something else.|
+```json
+// SublimeLinter Settings - User
+{
+  "linters": {
+    "ameba": {
+      "executable": "path_to_ameba_executable"
+    }
+  },
+}
+```
