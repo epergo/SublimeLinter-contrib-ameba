@@ -2,7 +2,7 @@ from SublimeLinter.lint import Linter
 
 
 class Ameba(Linter):
-    regex = (r'^.+:(?P<line>\d+):(?P<col>\d+): E: (?P<message>.+)$')
+    regex = (r'^.+:(?P<line>\d+):(?P<col>\d+): ((?P<error>E)|(?P<warning>W)): (?P<message>.+)$')
     multiline = False
 
     tempfile_suffix = '-'
