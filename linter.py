@@ -9,7 +9,7 @@ class Ameba(Linter):
 
     defaults = {
         'selector': 'source.crystal',
-        'auto_fix': false,
+        'auto_fix': False,
         'executable': '${folder}/bin/ameba'
     }
 
