@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/epergo/SublimeLinter-contrib-ameba.svg?branch=master)](https://travis-ci.org/epergo/SublimeLinter-contrib-ameba)
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [ameba](https://github.com/veelenga/ameba). It will be used with files that have crystal syntax.
+This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [ameba](https://github.com/crystal-ameba/ameba). It will be used with files that have crystal syntax.
 
 ## Installation
 
@@ -15,7 +15,7 @@ Before installing this plugin, you must ensure that `ameba` is installed on your
 ```crystal
 development_dependencies:
   ameba:
-    github: veelenga/ameba
+    github: crystal-ameba/ameba
 ```
 
 Run `shards install`, this will place an `ameba` executable in a `bin` folder inside your project's folder.
