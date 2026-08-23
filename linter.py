@@ -14,7 +14,7 @@ class Ameba(Linter):
     }
 
     def cmd(self):
-        settings = self.get_view_settings()
+        settings = self.settings
         if settings['auto_fix']:
             return (settings['executable'], '--format', 'flycheck', '--fix', '${file}')
         else:
