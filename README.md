@@ -10,6 +10,9 @@ SublimeLinter must be installed in order to use this plugin.
 
 Please use [Package Control](https://packagecontrol.io) to install both SublimeLinter and the linter plugin.
 
+Install a Crystal syntax package, such as `Crystal`, and select its syntax for your
+Crystal files. This linter runs only for the `source.crystal` scope.
+
 Before installing this plugin, you must ensure that `ameba` is installed on your project. Add `ameba` to your `shard.yml` file, in `development_dependencies`:
 
 ```crystal
